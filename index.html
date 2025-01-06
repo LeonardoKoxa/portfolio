@@ -5,122 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leonardo Koxhaj - Portfolio</title>
     <style>
-        /* General styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
             color: #333;
             line-height: 1.6;
+            background: #f4f4f9;
         }
-
-        h1, h2, h3 {
-            font-weight: bold;
-        }
-
-        a {
-            text-decoration: none;
-            color: #ff6600;
-        }
-
         header {
-            background-color: #333;
+            background: #333;
             color: #fff;
-            padding: 2rem;
+            padding: 1rem 0;
             text-align: center;
         }
-
         header h1 {
-            font-size: 3rem;
+            margin: 0;
+            font-size: 2.5rem;
         }
-
-        header p {
+        header img {
+            max-width: 150px;
+            border-radius: 50%;
             margin-top: 1rem;
-            font-size: 1.2rem;
-            color: #ccc;
         }
-
         nav {
             margin-top: 1rem;
         }
-
         nav a {
-            margin: 0 1rem;
-            color: #ff6600;
-            font-size: 1.1rem;
-        }
-
-        .main-content {
-            padding: 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 2rem auto;
-        }
-
-        .card {
-            background: #fff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            text-align: center;
-        }
-
-        .card img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-        }
-
-        .card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .card p {
-            font-size: 1rem;
-            color: #666;
-            margin-bottom: 1rem;
-        }
-
-        .cta {
-            display: inline-block;
-            background-color: #ff6600;
             color: #fff;
-            padding: 0.8rem 1.5rem;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
+            margin: 0 1rem;
+            text-decoration: none;
         }
-
-        .cta:hover {
-            background-color: #e65500;
+        section {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .projects, .skills, .contact {
+            margin: 1rem 0;
+        }
+        .project {
+            border: 1px solid #ddd;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
         footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
             background: #333;
             color: #fff;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
         }
-
         footer a {
-            color: #ff6600;
+            color: #ffcc00;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <header>
+        <!-- Add your image here -->
+        <img src="profile.jpg" alt="Leonardo Koxhaj Profile Picture">
         <h1>Leonardo Koxhaj</h1>
         <p>Aspirant Machine Learning Engineer | AI Enthusiast</p>
         <nav>
@@ -129,28 +83,36 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
-
-    <section class="main-content" id="projects">
-        <div class="card">
-            <img src="https://via.placeholder.com/300" alt="AI Platform PdM">
-            <h3>AI Platform PdM</h3>
-            <p>Developing a predictive maintenance platform to forecast failures in networking devices.</p>
-            <a href="#" class="cta">Learn More</a>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>AI Platform PdM (Predictive Maintenance)</h3>
+            <p>Developing a predictive maintenance platform to forecast failures in networking devices using FastAPI, Celery, and Apache Superset.</p>
         </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/300" alt="Q-Learning Pathfinding">
-            <h3>Q-Learning Pathfinding</h3>
-            <p>Implemented a Q-Learning model for optimal pathfinding on elevation maps.</p>
-            <a href="#" class="cta">Learn More</a>
+        <div class="project">
+            <h3>Q-Learning for Optimal Pathfinding</h3>
+            <p>Implemented a Q-Learning model to determine the optimal path on elevation maps using the Upper Confidence Bound (UCB) algorithm.</p>
         </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/300" alt="Fraud Detection with LSTM">
+        <div class="project">
             <h3>Fraud Detection with LSTM</h3>
-            <p>Built a fraud detection system using Long Short-Term Memory (LSTM) networks.</p>
-            <a href="#" class="cta">Learn More</a>
+            <p>Developed a fraud detection system using Long Short-Term Memory (LSTM) networks to analyze transactional data and identify anomalies.</p>
         </div>
     </section>
-
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Languages: Python, SQL, Java, HTML, JavaScript</li>
+            <li>Frameworks: Scikit, TensorFlow, Keras, FastAPI, Celery</li>
+            <li>Tools: Docker, PostgreSQL, MySQL, Hadoop, Apache Superset</li>
+            <li>Platforms: Linux, Mac, Windows, Raspberry Pi, Microsoft Azure, Google Cloud</li>
+            <li>Soft Skills: Leadership, Event Management, Public Speaking, Time Management</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:koxhay@gmail.com">koxhay@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/leonardokoxa" target="_blank">github.com/leonardokoxa</a></p>
+    </section>
     <footer>
         <p>&copy; 2025 Leonardo Koxhaj | <a href="#top">Back to top</a></p>
     </footer>
